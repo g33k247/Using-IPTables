@@ -2,7 +2,7 @@
 Supporting files for v1 of my Using iptables Lab Exercises.
 
 # description
-This tool was inspired by and borrowed heavily from the PIVOT Challenges, specifically the work of Wilington University (Eric Arnoth).
+This tool was inspired by and borrowed heavily from the PIVOT Challenges, specifically the work of Wilmington University (Eric Arnoth).
 
 # contents
 Files included as part of the repository:
