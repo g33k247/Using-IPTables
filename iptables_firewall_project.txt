@@ -1,0 +1,86 @@
+///////////////PROJECT #1 - IPTABLES\\\\\\\\\\\\\\
+Ref: https://pivotproject.org/
+
+- Created three (3) VMs, based on Ubuntu 14.04 LTS, using Oracle VirtualBox software.
+
+	FIREWALL
+	creds: root / 1qaz!QAZ
+	Hostname: firewall
+	OS: Ubuntu 14.04 LTS
+	eth0: 10.1.1.1/24
+	eth1: 10.2.2.1/24
+	services: OpenSSH server, Virtual Machine Host (on install)
+
+
+	NORTH CLIENT
+	creds: root / 1qaz!QAZ
+	Hostname: northclient
+	OS: Ubuntu 14.04 LTS
+	eth0: 10.1.1.10/24
+	services: OpenSSH server, DNS server, LAMP server, Mail server, Samba file server, Virtual Machine Host (on install)
+
+	SOUTH CLIENT
+	creds: root / 1qaz!QAZ
+	Hostname: southclient
+	OS: Ubuntu 14.04 LTS
+	eth0: 10.2.2.10/24
+	services: OpenSSH server, DNS server, LAMP server, Mail server, Samba file server, Virtual Machine Host (on install)
+
+- Configuration:
+	-- networking configs on each machine
+		-- edited etc/interfaces/eth0.conf
+		-- set dhcp and static ip addr
+		-- rebooted each machine and tested ip parameters	
+	-- ensured iptables installed/active on each machine
+		-- created rc.iptables.sh script on the firewall VM, in /etc/init.d/rc.iptables.sh
+		-- flushed iptables for start state of the firewall VM using the 'rc.iptables.sh start' command
+	-- created a post-config snapshot for each of the VMs
+	
+- Created a Lab Exercises document
+	-- draft a minimum of three (3) scenarios
+	-- test/refine
+	[ ] finalized the exercise sheet
+	[ ] saved to PDF
+	
+- Packaged VMs and documentation:
+	[ ] flushed all tables & shutdown VMs
+	[ ] saved and exported the VMs
+	[ ] determined best method to package the items
+	[ ] determined best hosting/transfer location
+		[ ] Google drive
+		[ ] Onedrive
+		[ ] FireFox large file transfer
+		[ ] others
+		
+- Lessons learned
+
+==============================================
+otehr exercise ideas:
+
+1. saveing ruels to be persistent
+iptables-save > /etc/iptables-start-rules
+
+then this command on boot:
+iptables-restore < /etc/iptables-start-rules
+
+
+==============================================
+- Exported the VMs for packaging
+	-- can a single .ova file be used to hold 3 VMs + the docs?
+	-- Virtualbox allows you to export an Appliance that can be imported in any virtualization software (VMWare, Virtualbox etc.) and configures itself to the local hardware
+	-- You can save any virtual machine as an Appliance in Virtualbox. Just do: File -> Export Appliance Ctrl+E
+	-- look at a VirtualBox setup—and perhaps a Vagrant script; Vagrant supports VirtualBox and allows you to Create and configure lightweight, reproducible, and portable development environments
+		-- much easier to share a single or bunch of text files than a big export of VirtualBox image. Especially if you want to manage updates.
+	-- Once VirtualBox and Vagrant are installed a simple:
+
+		vagrant up
+
+			Will:
+				- download the base image you have chosen.
+				- Configure the virtual hardware and network (NAT for example).
+				- Configure shared folders between the host and the virtual machine.
+				- Run the provision scripts you wrote.
+				- Run the machine and manage simple SSH access through vagrant ssh.
+				- A single Vagrantfile can also handle specificities of Windows or Mac hosts.
+				
+			Ref: https://superuser.com/questions/964935/want-to-distribute-linux-virtual-machine-for-students-to-work-on
