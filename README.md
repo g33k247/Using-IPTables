@@ -12,7 +12,7 @@ Files included as part of the repository:
 - Building the Lab on a Windows 10 Host (how-to document on building the virtual lab environment)
 - Lab - Using iptables Exercises.docx (iptables exercises)
 - rc.iptables.sh (rc script for deployment on the dual-homed host)
-- 
+- link to .ova file hosted on onedrive
 
 # supporting procedures
 How to import a VM to an appliance:
