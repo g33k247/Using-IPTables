@@ -1,4 +1,4 @@
-# using_iptables v1
+# Using IPTables v1
 Supporting files for v1 of my Using iptables Lab Exercises.
 
 # description
