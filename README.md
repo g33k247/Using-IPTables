@@ -17,8 +17,8 @@ Files included as part of the repository:
 - link to .ova file hosted on onedrive
 
 # how to download the .ova files
-Click this link xxxxx to download the .ova file (~901MB) containing the firewall VM for the project.
-Click this link xxxxx to download the .ova file (~901MB) containing the two client VMs for the project.
+Click this link https://1drv.ms/u/s!Ahq9EBxMhlUU8dsUoUBflDMxe6e5Zg to download the .ova file (~901MB) containing the firewall VM for the project.
+Click this link https://1drv.ms/u/s!Ahq9EBxMhlUU8dsV7vmgujq2xTZIAw?e=T5iQDo to download the .ova file (~901MB) containing the two client VMs for the project.
 
 # supporting procedures
 How to import a VM to an appliance:
