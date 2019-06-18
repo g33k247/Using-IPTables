@@ -16,8 +16,9 @@ Files included as part of the repository:
 - rc.iptables.sh (rc script for deployment on the dual-homed host)
 - link to .ova file hosted on onedrive
 
-# how to download the .ova file
-Click this link https://1drv.ms/u/s!Ahq9EBxMhlUU8dpwF7Wze4ke95nb7g?e=Hg5y48 to download the .ova file (~901MB) containing all three (3) VMs needed for the project.
+# how to download the .ova files
+Click this link xxxxx to download the .ova file (~901MB) containing the firewall VM for the project.
+Click this link xxxxx to download the .ova file (~901MB) containing the two client VMs for the project.
 
 # supporting procedures
 How to import a VM to an appliance:
